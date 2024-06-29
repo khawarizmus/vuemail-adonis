@@ -57,7 +57,12 @@
     "@adonisjs/lucid": "^21.1.0",
     "@adonisjs/vite": "^3.0.0",
     "@vinejs/vine": "^2.1.0",
-    "reflect-metadata": "^0.2.2"
+    "@vitejs/plugin-vue": "^5.0.5",
+    "@vue-email/components": "^0.0.17",
+    "@vue-email/render": "^0.0.9",
+    "@vue/server-renderer": "^3.4.31",
+    "reflect-metadata": "^0.2.2",
+    "vue": "^3.4.31"
   },
   "hotHook": {
     "boundaries": [
