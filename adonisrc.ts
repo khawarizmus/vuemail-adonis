@@ -10,7 +10,7 @@ export default defineConfig({
   | will be scanned automatically from the "./commands" directory.
   |
   */
-  commands: [() => import('@adonisjs/core/commands')],
+  commands: [() => import('@adonisjs/core/commands'), () => import('@adonisjs/mail/commands')],
 
   /*
   |--------------------------------------------------------------------------
@@ -30,7 +30,8 @@ export default defineConfig({
     },
     () => import('@adonisjs/core/providers/vinejs_provider'),
     () => import('@adonisjs/cors/cors_provider'),
-    () => import('@adonisjs/vite/vite_provider')
+    () => import('@adonisjs/vite/vite_provider'),
+    () => import('@adonisjs/mail/mail_provider')
   ],
 
   /*
@@ -41,7 +42,7 @@ export default defineConfig({
   | List of modules to import before starting the application.
   |
   */
-  preloads: [() => import('#start/routes'), () => import('#start/kernel')],
+  preloads: [() => import('#start/routes'), () => import('#start/kernel'), () => import('#start/events')],
 
   /*
   |--------------------------------------------------------------------------
@@ -74,5 +75,5 @@ export default defineConfig({
   hooks: {
     onBuildStarting: [() => import('@adonisjs/vite/build_hook')]
   },
-    assetsBundler: false
+  assetsBundler: false
 })
