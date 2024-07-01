@@ -4,6 +4,9 @@ import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
   plugins: [
+    // vue({
+    //   include: [/\.vue$/, /\.vue\?vue/, /\.ts$/],
+    // }),
     adonisjs({
       /**
        * Entrypoints of your application. Each entrypoint will
@@ -14,8 +17,7 @@ export default defineConfig({
       /**
        * Paths to watch and reload the browser on file change
        */
-      reload: ['resources/views/**/*.edge'],
+      reload: ['resources/views/**/*.edge', 'resources/views/**/*.vue'],
     }),
-    vue(),
   ],
 })

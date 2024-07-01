@@ -31,7 +31,8 @@ export default defineConfig({
     () => import('@adonisjs/core/providers/vinejs_provider'),
     () => import('@adonisjs/cors/cors_provider'),
     () => import('@adonisjs/vite/vite_provider'),
-    () => import('@adonisjs/mail/mail_provider')
+    () => import('@adonisjs/mail/mail_provider'),
+    () => import('./providers/app_provider.js'),
   ],
 
   /*
@@ -42,7 +43,11 @@ export default defineConfig({
   | List of modules to import before starting the application.
   |
   */
-  preloads: [() => import('#start/routes'), () => import('#start/kernel'), () => import('#start/events')],
+  preloads: [
+    () => import('#start/routes'),
+    () => import('#start/kernel'),
+    () => import('#start/events'),
+  ],
 
   /*
   |--------------------------------------------------------------------------
@@ -68,12 +73,18 @@ export default defineConfig({
     ],
     forceExit: false,
   },
-  metaFiles: [{
-    pattern: 'public/**',
-    reloadServer: false,
-  }],
+  metaFiles: [
+    {
+      pattern: 'public/**',
+      reloadServer: false,
+    },
+    {
+      pattern: 'resources/views/**/*.edge',
+      reloadServer: false,
+    },
+  ],
   hooks: {
-    onBuildStarting: [() => import('@adonisjs/vite/build_hook')]
+    onBuildStarting: [() => import('@adonisjs/vite/build_hook')],
   },
-  assetsBundler: false
+  assetsBundler: false,
 })
