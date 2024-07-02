@@ -73,16 +73,16 @@ export default defineConfig({
     ],
     forceExit: false,
   },
-  metaFiles: [
-    {
-      pattern: 'public/**',
-      reloadServer: false,
-    },
-    {
-      pattern: 'resources/views/**/*.edge',
-      reloadServer: false,
-    },
-  ],
+  // metaFiles: [
+  //   {
+  //     pattern: 'public/**',
+  //     reloadServer: false,
+  //   },
+  //   {
+  //     pattern: 'resources/views/**/*.edge',
+  //     reloadServer: false,
+  //   },
+  // ],
   hooks: {
     onBuildStarting: [() => import('@adonisjs/vite/build_hook')],
   },
