@@ -4,9 +4,7 @@ import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
   plugins: [
-    // vue({
-    //   include: [/\.vue$/, /\.vue\?vue/, /\.ts$/],
-    // }),
+    vue(),
     adonisjs({
       /**
        * Entrypoints of your application. Each entrypoint will
