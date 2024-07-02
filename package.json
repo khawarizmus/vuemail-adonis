@@ -48,7 +48,8 @@
     "prettier": "^3.3.2",
     "ts-node": "^10.9.2",
     "typescript": "~5.4",
-    "vite": "^5.3.2"
+    "vite": "^5.3.2",
+    "@vavite/multibuild": "^4.1.1"
   },
   "dependencies": {
     "@adonisjs/auth": "^9.2.3",
@@ -62,6 +63,7 @@
     "@vue-email/components": "^0.0.17",
     "@vue-email/render": "^0.0.9",
     "@vue/server-renderer": "^3.4.31",
+    "locate-path": "^7.2.0",
     "reflect-metadata": "^0.2.2",
     "vue": "^3.4.31"
   },
@@ -74,5 +76,6 @@
   "eslintConfig": {
     "extends": "@adonisjs/eslint-config/app"
   },
-  "prettier": "@adonisjs/prettier-config"
+  "prettier": "@adonisjs/prettier-config",
+  "packageManager": "pnpm@9.4.0"
 }

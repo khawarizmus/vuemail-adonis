@@ -41,6 +41,9 @@ importers:
       '@vue/server-renderer':
         specifier: ^3.4.31
         version: 3.4.31(vue@3.4.31(typescript@5.4.5))
+      locate-path:
+        specifier: ^7.2.0
+        version: 7.2.0
       reflect-metadata:
         specifier: ^0.2.2
         version: 0.2.2
@@ -78,6 +81,9 @@ importers:
       '@types/node':
         specifier: ^20.14.9
         version: 20.14.9
+      '@vavite/multibuild':
+        specifier: ^4.1.1
+        version: 4.1.1(vite@5.3.2(@types/node@20.14.9))
       eslint:
         specifier: ^8.57.0
         version: 8.57.0

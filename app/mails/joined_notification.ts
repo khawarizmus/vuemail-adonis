@@ -11,9 +11,6 @@ export default class JoinedNotification extends BaseMail {
    * the email is sent or queued.
    */
   async prepare() {
-    this.message
-      .subject(this.subject)
-      .to(this.email)
-      .htmlView('emails/joined', { title: 'Testing' })
+    this.message.subject(this.subject).to(this.email).htmlView('joined', { title: 'Testing' })
   }
 }
